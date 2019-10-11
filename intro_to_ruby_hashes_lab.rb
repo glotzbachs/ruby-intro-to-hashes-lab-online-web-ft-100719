@@ -25,14 +25,20 @@ end
 
 def monopoly_with_third_tier
 	#copy and paste the monopoly hash you built in the previous method. We're going to add stuff to it here!
-		monopoly[:railroads][:rent_in_dollars]={one_piece_owned: 25}
-		monopoly[:railroads][:rent_in_dollars]={two_pieces_owned: 50}
-		monopoly[:railroads][:rent_in_dollars]={three_pieces_owned: 100}
-		monopoly[:railroads][:rent_in_dollars]={four_pieces_owned: 200}
-		monopoly[:railroads][:names]={:reading_railroad =>{}}
-		monopoly[:railroads][:names]={:pennsylvania_railroad =>{}}
-		
-		
+		monopoly={
+		  :railroads{
+		    :pieces => 4,
+		    :names =>{
+	        :reading_railroad =>{},
+	        :pennsylvania_railroad =>{}
+	      },
+		    :rent_in_dollars => {
+		      {one_piece_owned: 25},
+	        {two_pieces_owned: 50},
+          {three_pieces_owned: 100},
+		      {four_pieces_owned: 200}
+		    }
+	      
 end
 
 def monopoly_with_fourth_tier
